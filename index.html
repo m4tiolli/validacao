@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="w-full h-screen grid place-items-center bg-[#efefef]">
+
+  <p class="absolute top-3 font-bold">O usuário é usuario123 e a senha é 123123. Por enquanto a validação ocorre apenas
+    para esse usuário pq nao sei se ta podendo fazer conexão com banco de dados. </p>
+
+  <section class="bg-white flex flex-col gap-4 items-center px-4 py-8 rounded-md shadow-xl">
+    <h1 class="font-bold text-2xl text-blue-500">Fazer Login</h1>
+    
+    <span class="flex flex-col items-left">
+      <input id="usuario" placeholder="Usuário" type="text" class="bg-[#efefef] px-4 py-2 outline-blue-500 rounded-lg">
+      <p id="erro-usuario" class="h-4 font-semibold text-red-700 text-md"></p>
+    </span>
+    <span class="flex flex-col items-left">  
+      <input id="senha" placeholder="Senha" type="password" class="bg-[#efefef] px-4 py-2 outline-blue-500 rounded-lg">
+      <p id="erro-senha" class="h-4 font-semibold text-red-700 text-md"></p>
+    </span>
+    <button
+      class="bg-blue-500 px-8 py-2 text-white font-semibold rounded-lg hover:shadow-lg hover:opacity-70 transition-all active:translate-y-[1px]"
+      onclick="handleLogin()">Entrar</button>
+  </section>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>

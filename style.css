@@ -1,0 +1,19 @@
+.invalido {
+  border: 2px solid #b91c1c;
+  animation: invalid linear .4s;
+}
+
+@keyframes invalid {
+  0% {
+    transform: translateX(0);
+  }
+  33% {
+    transform: translateX(5px);
+  }
+  66% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
