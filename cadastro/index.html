@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body class="w-full h-screen grid place-items-center bg-[#efefef]">
+
+  <section class="bg-white flex flex-col gap-2 items-center px-4 py-8 rounded-md shadow-xl">
+    <h1 class="font-bold text-2xl text-blue-500">Criar conta</h1>
+
+    <span class="flex flex-col items-left my-2">
+      <input id="usuario" placeholder="Usuário" type="text"
+        class="border-[1px] border-grey-900 bg-[#efefef] px-4 py-2 outline-blue-500 rounded-lg">
+      <p id="erro-usuario" class="h-4 font-semibold text-red-700 text-md"></p>
+    </span>
+    <span class="flex flex-col items-left my-2">
+      <span id="span-senha"
+        class="border-[1px] border-grey-900 bg-[#efefef] px-4 py-2 outline-blue-500 rounded-lg flex items-center">
+        <input id="senha" placeholder="Senha" type="password" class="senhas outline-none bg-transparent w-40">
+        <button class="fa-regular fa-eye" onclick="showPassword(0)"></button>
+        <button class="fa-regular fa-eye-slash" onclick="showPassword(0)"></button>
+      </span>
+      <p id="erro-senha" class="h-4 font-semibold text-red-700 text-md"></p>
+    </span>
+    <span class="flex flex-col items-left my-2">
+      <span id="span-confirm-senha"
+        class="border-[1px] border-grey-900 bg-[#efefef] px-4 py-2 outline-blue-500 rounded-lg flex items-center">
+        <input class="senhas outline-none bg-transparent w-40" id="confirm-senha" placeholder="Confirmar senha"
+          type="password">
+        <button class="fa-regular fa-eye" onclick="showPassword(1)"></button>
+        <button class="fa-regular fa-eye-slash" onclick="showPassword(1)"></button>
+      </span>
+      <p id="erro-confirm-senha" class="h-4 font-semibold text-red-700 text-md"></p>
+    </span>
+    <button
+      class="bg-blue-500 px-8 py-2 text-white font-semibold rounded-lg hover:shadow-lg hover:opacity-70 transition-all active:translate-y-[1px]"
+      onclick="handleCadastro()">Criar conta</button>
+    <p class="font-medium text-sm">Já possui conta? <a href="../login/index.html"
+        class="underline text-blue-700">Entrar</a></p>
+  </section>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
